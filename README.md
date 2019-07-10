@@ -76,7 +76,7 @@ struct B {
 
 class C {
   public:
-   C(): a(), b() {}
+   C(): b(), a() {}
   private:
    A a;
    B b;
