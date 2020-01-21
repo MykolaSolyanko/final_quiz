@@ -698,7 +698,6 @@ class Base {
  puЬlic :
   virtual void mfl () const;
   virtual void mf2 (int х);
-  virtual void mf3 () &;
   void mf4 () const;
 };
 
@@ -706,7 +705,6 @@ class Derived : public Base {
  puЬlic :
   virtual void mfl ();
   virtual void mf2 (unsigned int х);
-  virtual void mf3 () &&;
   void mf4 () const;
 };
 ```
