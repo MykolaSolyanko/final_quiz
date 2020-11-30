@@ -143,9 +143,8 @@ g++ -std=c++14 -Werror -pedantic main.cpp
 void print_array(size_t size) {
   int array[size] {1, 2};
   for (auto value: array) {
-	std::cout << value;
+	  std::cout << value;
   }
-  std::cout << std::endl;
 }
 
 int main(int argc, char const *argv[]) {
@@ -160,6 +159,7 @@ int main(int argc, char const *argv[]) {
 #include <iostream>
 #include <cstring>
 
+// strlen - функция для получения длины строки, принимает указатель на const char*
 int main(int argc, char const *argv[]) {
  char array2[] = {'H', 'e', 'l', 'l', 'o'};
  char array3[] = {"Hello"};
@@ -624,19 +624,20 @@ d) ошибка компиляции;
 23. Что будет выведено на экран
 
 ```
+#include <iostream>
 class C {
 public:
-  C(int i) : i(i) { std::cout << i; }
-  ~C() { std::cout << i + 5; }
-
-private:
-  int i;
+  void print() {
+    std::cout << "Hello\n";
+  }
 };
 
 int main() {
-  const C &c = C(1);
-  C(2);
-  C(3);
+  C* ptr{nullptr};
+
+  ptr->print();
+  return 0;
+}
 ```
 
 24. Что будет выведенно на экране
